@@ -1,0 +1,24 @@
+p,
+label {
+    margin: 0px;
+    padding: 0px;
+}
+
+.main {
+
+    height: 100vh;
+
+    .bg img {
+        height: 65%;
+    }
+}
+
+button {
+    background-color: #3559E9;
+    padding-top: 12px !important;
+    padding-bottom: 12px !important;
+}
+
+.error-msg p {
+    color: #DB2719;
+}

@@ -1,0 +1,91 @@
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    // background-color: #F5F5F7;
+    background-color: #EBF2FD;
+    padding: 0px 150px;
+    height: 65px;
+}
+
+.logo img {
+    height: 100px;
+}
+
+.login-options,
+.signup-options {
+    display: flex;
+    justify-content: space-evenly;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+}
+
+.login-btn {
+    margin-right: 10px;
+    font-weight: 500;
+    border-radius: 10px;
+    // border: 2px solid #6f8cf3;
+    border: 2px solid #3563E9;
+    background: #D6E4FD;
+    color: #4d4d4d;
+    padding: 10px 40px;
+    cursor: pointer;
+}
+.signup-btn {
+    margin-right: 10px;
+    font-weight: 500;
+    border-radius: 10px;
+    border: 2px solid #3563E9;
+    background: none;
+    color: #4d4d4d;
+    padding: 10px 40px;
+    cursor: pointer;
+}
+
+.login-signup button:hover {
+    // background-color: #a6a6ef;
+    background-color: #3563E9;
+    color: #F5F5F7;
+}
+
+.login-options button{
+    background: none;
+    border: none;
+    font-size: 34px;
+    padding: 0px 0px 15px 0px;
+    border-bottom: 3px solid #626266;
+    font-weight: 500;
+    color: #626266;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    span{
+        font-size: 40px;
+    }
+}
+.login-options button:hover{
+    color: #2c2c3c;
+    border-bottom: 3px solid #3563E9;
+}
+.signup-options button{
+    background: none;
+    border: none;
+    font-size: 34px;
+    padding: 0px 0px 15px 0px;
+    border-bottom: 3px solid #626266;
+    font-weight: 500;
+    color: #626266;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    span{
+        font-size: 40px;
+    }
+}
+.signup-options button:hover{
+    color: #2c2c3c;
+    border-bottom: 3px solid #3563E9;
+}

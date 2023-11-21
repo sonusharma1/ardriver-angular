@@ -1,0 +1,41 @@
+<div class="container main mt-5 pt-5">
+    <div class="row d-flex justify-content-center">
+        <div class="col-md-6 hero">
+            <img src="../../../../assets/logoin-bg2.svg" alt="" height="300px">
+        </div>
+        <div class="col-md-6 form-div">
+            <div>
+                <form action="">
+                    <div class="col-md-6 mb-3">
+                        <input type="text" class="form-control" id="name" name="name" [(ngModel)]="customer.customerName"
+                            placeholder="Enter full name" required />
+
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <input type="email" class="form-control" name="email" [(ngModel)]="customer.email"
+                            placeholder="Enter your email" required />
+
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <input type="number" class="form-control" name="mobileNo" [(ngModel)]="customer.mobileNo"
+                            placeholder="Enter Mobile No" required />
+
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <input type="password" class="form-control" id="password" name="password" [(ngModel)]="customer.password"
+                            placeholder="Create password" required />
+                    </div>
+
+                    <div class="error-msg col-md-6 mb-3" *ngIf="response?.status===false">
+                        <li *ngFor="let error of response?.errorMessages" style="color: brown;">{{error}}</li>
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+                        <button (click)="onCreateAccountBtnClick()"  type="submit" class="btn btn-primary ps-5 pe-5 col-md-12">Create
+                            Account</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

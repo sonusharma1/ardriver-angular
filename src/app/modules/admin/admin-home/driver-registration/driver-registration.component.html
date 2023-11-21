@@ -1,0 +1,71 @@
+<div class="container pt-3">
+    <div class="row topbar px-2">
+        <div class="col-md-12 d-flex align-items-center">
+            <img class="p-2 me-3" src="../../../../../assets/icons/back-btn.svg" alt=""
+                routerLink="/admin/home/drivers">
+            <h6>Driver Registration Form</h6>
+        </div>
+    </div>
+
+    <div class="row registration-form mt-3 py-4 px-3">
+        <div class="pb-3">
+            <h6>Driver's Information : </h6>
+        </div>
+        <div class="col-md-5 mb-3">
+            <label for="forninput1" class="form-label">Driver Name</label>
+            <input type="text" class="form-control " id="forninput1" name="name"
+                 placeholder="Driver Name" [(ngModel)]="car.driver.driverName">
+        </div>
+        <div class="col-md-5 mb-3">
+            <label for="forninput1" class="form-label">Email</label>
+            <input type="email" class="form-control " id="forninput1" name="name"
+                 placeholder="Email" [(ngModel)]="car.driver.email">
+        </div>
+        <div class="col-md-5 mb-3">
+            <label for="forninput1" class="form-label">Mobile No</label>
+            <input type="number" class="form-control " id="forninput1" name="name"
+                 placeholder="Mobile No" [(ngModel)]="car.driver.mobileNo">
+        </div>
+        <div class="col-md-5 mb-3">
+            <label for="forninput1" class="form-label">License No</label>
+            <input type="text" class="form-control " id="forninput1" name="name"
+                 placeholder="License No" [(ngModel)]="car.driver.licenceNo">
+        </div>
+        <div class="col-md-5 mb-3">
+            <label for="forninput1" class="form-label">Password</label>
+            <input type="password" class="form-control " id="forninput1" name="name"
+                 placeholder="Create new password" [(ngModel)]="car.driver.password">
+        </div>
+        <div class="pt-4 pb-3">
+            <h6>Car's Information : </h6>
+        </div>
+        <div class="col-md-5 mb-3">
+            <label for="forninput1" class="form-label">Car's No. Plate</label>
+            <input type="text" class="form-control " id="forninput1" name="name"
+                 placeholder="No. Plate" [(ngModel)]="car.licenseNumberPlate">
+        </div>
+        <div class="col-md-5 mb-3">
+            <label for="forninput1" class="form-label">Car Type</label>
+            <input type="text" class="form-control " id="forninput1" name="name"
+                 placeholder="1-5" [(ngModel)]="car.carType">
+        </div>
+        <div class="col-md-5 mb-3">
+            <label for="forninput1" class="form-label">Lattitude</label>
+            <input type="text" class="form-control " id="forninput1" name="name"
+                 placeholder="Lattitude" [(ngModel)]="car.latitude">
+        </div>
+        <div class="col-md-5 mb-3">
+            <label for="forninput1" class="form-label">Longitude</label>
+            <input type="text" class="form-control " id="forninput1" name="name"
+                 placeholder="Longitude" [(ngModel)]="car.longitude">
+        </div>
+        <div class="mb-4">
+            <div class="error-msg" *ngIf="carSavingErrorMsg">
+                <li *ngFor="let error of responseErrors" style="color: #B71112;">{{error}}</li>
+            </div>
+        </div>
+        <div class="col-md-10 mb-3 pt-2 submit-btn d-flex flex-row-reverse">
+            <button class="btn col-md-3 py-2" (click)="onSaveBtnClick()">Save</button>
+        </div>
+    </div>
+</div>

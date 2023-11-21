@@ -1,0 +1,103 @@
+h1,h2,h3,h4,h5,h6,p,a{
+    margin: 0;
+    padding: 0;
+}
+.trips-card{
+    background-color: white;
+    border-radius: 10px;
+
+    h6{
+        font-size: 25px;
+        display: flex;
+        align-items: center;
+    }
+
+    p,label{
+        font-family: 'Poppins';
+        color: #878787;
+        font-size: 14.5px;
+        border-radius: 10px;
+    }
+
+    .positive-percent{
+        background-color: #def8ec;
+        color: #00bc61;
+    }
+    .negative-percent{
+        background-color: #fde9e9;
+        color: #ee4949;
+    }
+}
+
+// --------------------------------------------------------------------------------
+.top-bar{
+
+    input {
+        border-radius: 9px;
+    }
+
+    .search-btn{
+        background-color: #ebefff;
+        border-radius: 9px;
+        color: #3559E9 ;
+    }
+
+    .export-btn{
+        background-color: #def8ec;
+        color: #00bc61;
+        border: none;
+        border-radius: 9px;
+    }
+}
+
+
+.tablebody {
+    background-color: white !important;
+    border-radius: 6px;
+
+    thead {
+        background-color: #F3F7FD;
+
+        th p {
+            margin: 0;
+            padding: 0px;
+            font-weight: 500;
+        }
+    }
+
+    .t-head {
+        display: flex;
+
+        span {
+            cursor: pointer;
+        }
+    }
+
+    tbody span {
+        font-size: 19px;
+    }
+}
+
+// --------------------------------------------------------------------------
+.page-btns {
+
+    a {
+        text-decoration: none;
+        padding: 5px 12px;
+        cursor: pointer;
+        color: #656565;
+    }
+
+    .pre-next {
+        text-decoration: none;
+        color: #656565;
+    }
+}
+
+.selected {
+    text-decoration: none;
+    background: #ebefff !important;
+    color: #3559E9 !important;
+    border: none;
+    border-radius: 2px;
+}

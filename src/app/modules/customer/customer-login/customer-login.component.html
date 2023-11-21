@@ -1,0 +1,47 @@
+<!-- <div class="container logo">
+    <h2>Ardriver</h2>
+</div> -->
+<!-- <div class="container main"> -->
+<div class="main">
+    <div class="row">
+        <div class="col-md-6 hero">
+            <img src="../../../../assets/loginbg4.svg" width="85%" alt="">
+        </div>
+        <div class="col-md-6 login-form">
+            <div class="row">
+                <div class="col-md-12 main-heading">
+                    <div class="col">
+                        <img class="logo" src="../../../../assets/ardriver-logo4.svg" alt="">
+                    </div>
+                    <div class="col">
+                        <!-- <p>Find your next favorite ride!</p> -->
+                    </div>
+                </div>
+                <div class="col-md-12 form-data">
+                    <form action="" class="col-md-6">
+                        <div class="">
+                            <img class="icon" src="../../../../assets/icons/email.svg" alt="">
+                            <input type="email" class="form-control ps-5" name="email" [(ngModel)]="email" placeholder="Enter your email"
+                                required >
+
+                        </div>
+                        <div>
+                            <img class="icon" src="../../../../assets/icons/password.svg" alt="">
+                            <input type="password" class="form-control ps-5" id="password" name="password" [(ngModel)]="password"
+                                placeholder="Password" required />
+                        </div>
+                        <div *ngIf="isRegisteredCustomer===false" class="error-msg">
+                            <p>Invalid email or password</p>
+                        </div>
+                        <div>
+                            <button (click)="onLoginBtnClick()" type="submit" class="btn btn-primary ps-5 pe-5 col-md-12">Login</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-12">
+                    <!-- <p>Don't have an account? <a>SignUp</a></p> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

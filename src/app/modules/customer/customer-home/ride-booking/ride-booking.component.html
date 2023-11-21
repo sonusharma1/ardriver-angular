@@ -1,0 +1,125 @@
+<section class="container row col-md-12 ride-booking mt-5 ps-5 pe-5">
+    <div class="col-md-4 booking-form">
+        <form action="">
+            <div class="pb-3">
+                <h5 style="font-weight: 700;">Get a ride</h5>
+            </div>
+            <div class="pb-3">
+                <img src="../../../../../assets/icons/pickup-location.svg" alt="">
+                <!-- <input class="form-control ps-5" type="text" placeholder="Pickup Location" name="srcLocation"
+                    [(ngModel)]="srcLocation"> -->
+
+                <input class="form-control ps-5"
+                        type="text"
+                        placeholder="Pickup Location"
+                        [formControl]="srcLocationControl"
+                        [matAutocomplete]="srcAuto"
+                        >
+                <mat-autocomplete #srcAuto="matAutocomplete">
+                    <mat-option *ngFor="let option of srcLocationFilter | async" [value]="option.address">
+                        {{option.address}}
+                    </mat-option>
+                </mat-autocomplete>
+
+            </div>
+            <div class="pb-3">
+                <img src="../../../../../assets/icons/dropoff-location.svg" alt="">
+                <!-- <input class="form-control ps-5" type="text" placeholder="Dropoff Location" name="destLocation"
+                    [(ngModel)]="destLocation"> -->
+                <input  class="form-control ps-5"
+                        type="text"
+                        placeholder="DropOff Location"
+                        [formControl]="destLocationControl"
+                        [matAutocomplete]="destAuto">
+                <mat-autocomplete #destAuto="matAutocomplete">
+                    <mat-option *ngFor="let option of destLocationFilter | async" [value]="option.address">
+                        {{option.address}}
+                    </mat-option>
+                </mat-autocomplete>
+            </div>
+            <div>
+                <button (click)="onSearchBtnClick()">Serach</button>
+            </div>
+        </form>
+    </div>
+    <div *ngIf="isSearchedBtnClick" class="col-md-4 ride-options pt-2">
+        <h5>Choose a ride</h5>
+        <div class="cab-details pt-2">
+
+
+            <div class="cab-price px-2 py-4" [ngClass]="{'selectedRide':selectedCab==='AUTO'}" (click)="onCabPriceDivClick('AUTO')">
+                <div class="cab-icon">
+                    <img src="../../../../../assets/cab-icons/autorikshaw3.svg" alt="">
+                    <p class="ps-3">AUTO</p>
+                </div>
+                <div>
+                    <p><span class="material-symbols-rounded">
+                            currency_rupee
+                        </span>{{cabPrices?.AUTO}}
+                    </p>
+                </div>
+            </div>
+            <div class="cab-price px-2 py-4" [ngClass]="{'selectedRide':selectedCab==='MINI'}" (click)="onCabPriceDivClick('MINI')">
+                <div class="cab-icon">
+                    <img src="../../../../../assets/cab-icons/carmini.svg" alt="">
+                    <p class="ps-3">MINI</p>
+                </div>
+                <div>
+                    <p><span class="material-symbols-rounded">
+                            currency_rupee
+                        </span>{{cabPrices?.MINI}}
+                    </p>
+                </div>
+            </div>
+            <div class="cab-price px-2 py-4" [ngClass]="{'selectedRide':selectedCab==='PRIME'}" (click)="onCabPriceDivClick('PRIME')">
+                <div class="cab-icon">
+                    <img src="../../../../../assets/cab-icons/prime.svg" alt="">
+                    <p class="ps-3">PRIME</p>
+                </div>
+                <div>
+                    <p><span class="material-symbols-rounded">
+                            currency_rupee
+                        </span>{{cabPrices?.PRIME}}
+                    </p>
+                </div>
+            </div>
+            <div class="cab-price px-2 py-4" [ngClass]="{'selectedRide':selectedCab==='SUV'}" (click)="onCabPriceDivClick('SUV')">
+                <div class="cab-icon">
+                    <img src="../../../../../assets/cab-icons/just-go.svg" alt="">
+                    <p class="ps-3">SUV</p>
+                </div>
+                <div>
+                    <p><span class="material-symbols-rounded">
+                            currency_rupee
+                        </span>{{cabPrices?.SUV}}
+                    </p>
+                </div>
+            </div>
+            <div class="cab-price px-2 py-4" [ngClass]="{'selectedRide':selectedCab==='LUV'}" (click)="onCabPriceDivClick('LUV')">
+                <div class="cab-icon">
+                    <img src="../../../../../assets/cab-icons/lux.svg" alt="">
+                    <p class="ps-3">LUV</p>
+                </div>
+                <div>
+                    <p><span class="material-symbols-rounded">
+                            currency_rupee
+                        </span>{{cabPrices?.LUV}}
+                    </p>
+                </div>
+            </div>
+
+
+
+        </div>
+        <div class="pt-2">
+            <button (click)="onBookNowBtnClick()">Book Now</button>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d21141.892338148893!2d72.84372745666849!3d19.206572147887826!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b7275c365de3%3A0xdca731a406ff899b!2sKandivli!5e0!3m2!1sen!2sin!4v1696828538096!5m2!1sen!2sin"
+            width="600" height="450" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+            style="filter: grayscale(100%) !important; border-radius: 20px;border: 4px solid #c0c6d7;padding: 8px;">
+        </iframe>
+    </div>
+</section>

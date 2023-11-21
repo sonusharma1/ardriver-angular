@@ -1,0 +1,83 @@
+.welcome-div h6{
+    font-size: 20px;
+    color: rgb(49, 49, 49);
+    // font-weight: 400;
+}
+
+// --------------------------------------------------------------
+.report-card{
+    background-color: white;
+    border-radius: 10px;
+
+    h6{
+        font-size: 25px;
+        display: flex;
+        align-items: center;
+    }
+
+    p,label{
+        // display: flex;
+        font-family: 'Poppins';
+        color: #878787;
+        font-size: 14.5px;
+        border-radius: 10px;
+    }
+    span {
+        // font-size: 20px;
+        font-size: 16px;
+    }
+
+    .positive-percent{
+        background-color: #def8ec;
+        color: #00bc61;
+    }
+    .negative-percent{
+        background-color: #fde9e9;
+        color: #ee4949;
+    }
+}
+
+// --------------------------------------------------------------------------------
+
+.statistic{
+    // background-color: white;
+    border-radius: 10px;
+    p, h6 {
+        margin: 0;
+        padding: 0;
+    }
+
+    .sales-report{
+        background-color: white;
+        border-radius: 10px;
+        width: 850px;
+    }
+
+    .top-drivers {
+        background-color: white;
+        border-radius: 10px;
+
+        h6 {
+            font-size: 18px;
+        }
+
+        img {
+            height: 40px;
+            border-radius: 100px;
+        }
+        .driver-name{
+            font-weight: 500;
+        }
+
+        .driver-email{
+            font-size: 14px;
+            color: #6f7274;
+            font-weight: 400;
+        }
+
+        .currency{
+            font-size: 17px;
+            font-weight: 500;
+        }
+    }
+}

@@ -1,0 +1,131 @@
+.topbar {
+    background: white;
+    padding: 12px 0px;
+    border-radius: 6px;
+
+    button {
+        // background-color: #F2F4FC;
+        // background-color: #f1f3ff;
+        // background-color: #d7e2ff;
+        background-color: #ebefff;
+        // color: #3559E9;
+        color: #5e79e5;
+        border-radius: 10px;
+
+        // color: #879fff;
+        // border: 1px solid #879fff;
+        p {
+            padding: 0;
+            margin: 0;
+        }
+    }
+}
+
+.search-div {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    input {
+        font-family: 'Poppins';
+        font-weight: 400;
+        border-radius: 10px;
+        border: 1.5px solid #cbd3f6;
+        // background: #eff3f4;
+    }
+
+    img {
+        position: absolute;
+        opacity: 65%;
+        cursor: pointer;
+        background-color: #dae0f7;
+        border-radius: 0px 10px 10px 0px;
+    }
+}
+
+// ---------------------------------------------------------------------------
+
+.tablebody {
+    background-color: white !important;
+    border-radius: 6px;
+
+    thead {
+        background-color: #F3F7FD;
+
+        th p {
+            margin: 0;
+            padding: 0px;
+            font-weight: 500;
+        }
+    }
+
+    .t-head {
+        display: flex;
+
+        span {
+            cursor: pointer;
+        }
+    }
+
+    tbody img{
+        cursor: pointer;
+    }
+}
+
+// ----------------------------------------------------------------------------------
+.page-btns {
+
+    a {
+        text-decoration: none;
+        padding: 5px 12px;
+        cursor: pointer;
+        color: #656565;
+    }
+
+    .pre-next {
+        text-decoration: none;
+        color: #656565;
+    }
+}
+
+.selected {
+    text-decoration: none;
+    background: #ebefff !important;
+    color: #3559E9 !important;
+    border: none;
+    border-radius: 2px;
+}
+
+
+// -------------------------------------------------------------------------
+.driver-resistration{
+    background-color: #656565;
+    opacity: 50%;
+    height: 200px;
+    position: absolute;
+    z-index: 10;
+}
+
+// --------------------------------------------------------------------------
+.driver-update{
+    background-color: #ffffff;
+    height: 95vh;
+    position: absolute;
+    z-index: 10;
+    padding: 12px 0px;
+    border-radius: 10px;
+
+    img{
+        background-color: #ebefff ;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .registration-form {
+
+        .submit-btn button {
+            background: #3559E9 !important;
+            color: #f8f9ff !important;
+        }
+    }
+}

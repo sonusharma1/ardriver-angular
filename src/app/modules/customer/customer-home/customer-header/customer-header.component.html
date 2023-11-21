@@ -1,0 +1,34 @@
+<header class="">
+    <nav>
+        <img src="../../../../assets/ardriver-logo3.svg" height="100px" alt="">
+        <div class="nav-btns">
+            <ul>
+                <li>
+                    <button routerLink="book-ride" (click)="onToggleContentClick()">Ride Now</button>
+                </li>
+                <li>
+                    <div>
+                        <a (click)="onToggleBtnClick()">
+                            <img class="profile-icon" src="../../../../../assets/icons/profile-icon2.svg" alt="">
+                        </a>
+                        <div *ngIf="profileBtnToggle" class="dropdown-content">
+                            <!-- <div class="dropdown-content"> -->
+                            <a routerLink="customer-rides" (click)="onToggleContentClick()">
+                                <img src="../../../../../assets/icons/trip-list.svg" alt="">
+                                My trips
+                            </a>
+                            <a routerLink="customer-profile" (click)="onToggleContentClick()">
+                                <img src="../../../../../assets/icons/simple-profile.svg" alt="">
+                                Profile setting
+                            </a>
+                            <a routerLink="/customer/login">
+                                <img src="../../../../../assets/icons/logout.svg" alt="">
+                                Logout
+                            </a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>

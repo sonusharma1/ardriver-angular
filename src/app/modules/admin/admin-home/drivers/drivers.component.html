@@ -1,0 +1,187 @@
+<div class="container pt-3">
+
+    <div class="container row driver-update" *ngIf="isEditBtnClick">
+        <div class="col-md-12 ps-4">
+            <!-- <button (click)="onCloseBtnClick()">X</button> -->
+            <img (click)="onCloseBtnClick()" class="p-2 me-3" src="../../../../../assets/icons/back-btn.svg" alt="">
+            <!-- <h6 style="margin: 0;padding: 0;">Driver Registration Form</h6> -->
+        </div>
+
+
+        <div class="row registration-form pb-4 px-3 mx-4">
+            <div class="pb-3">
+                <h6>Driver's Information : </h6>
+            </div>
+            <div class="col-md-5 mb-3">
+                <label for="forninput1" class="form-label">Driver Name</label>
+                <input type="text" class="form-control " id="forninput1" name="name"
+                     placeholder="Driver Name" [(ngModel)]="car.driver.driverName">
+            </div>
+            <div class="col-md-5 mb-3">
+                <label for="forninput1" class="form-label">Email</label>
+                <input type="email" class="form-control " id="forninput1" name="name"
+                     placeholder="Email" [(ngModel)]="car.driver.email">
+            </div>
+            <div class="col-md-5 mb-3">
+                <label for="forninput1" class="form-label">Mobile No</label>
+                <input type="number" class="form-control " id="forninput1" name="name"
+                     placeholder="Mobile No" [(ngModel)]="car.driver.mobileNo">
+            </div>
+            <div class="col-md-5 mb-3">
+                <label for="forninput1" class="form-label">License No</label>
+                <input type="text" class="form-control " id="forninput1" name="name"
+                     placeholder="License No" [(ngModel)]="car.driver.licenceNo">
+            </div>
+            <div class="col-md-5 mb-3">
+                <label for="forninput1" class="form-label">Password</label>
+                <input type="password" class="form-control " id="forninput1" name="name"
+                     placeholder="Create new password" [(ngModel)]="car.driver.password">
+            </div>
+            <div class="pt-4 pb-3">
+                <h6>Car's Information : </h6>
+            </div>
+            <div class="col-md-5 mb-3">
+                <label for="forninput1" class="form-label">Car's No. Plate</label>
+                <input type="text" class="form-control " id="forninput1" name="name"
+                     placeholder="No. Plate" [(ngModel)]="car.licenseNumberPlate">
+            </div>
+            <div class="col-md-5 mb-3">
+                <label for="forninput1" class="form-label">Car Type</label>
+                <input type="text" class="form-control " id="forninput1" name="name"
+                     placeholder="1-5" [(ngModel)]="car.carType">
+            </div>
+            <div class="col-md-5 mb-3">
+                <label for="forninput1" class="form-label">Lattitude</label>
+                <input type="text" class="form-control " id="forninput1" name="name"
+                     placeholder="Lattitude" [(ngModel)]="car.latitude">
+            </div>
+            <div class="col-md-5 mb-3">
+                <label for="forninput1" class="form-label">Longitude</label>
+                <input type="text" class="form-control " id="forninput1" name="name"
+                     placeholder="Longitude" [(ngModel)]="car.longitude">
+            </div>
+            <div class="mb-4">
+                <div class="error-msg" *ngIf="carSavingErrorMsg">
+                    <li *ngFor="let error of responseErrors" style="color: #B71112;">{{error}}</li>
+                </div>
+            </div>
+            <div class="col-md-10 mb-3 pt-2 submit-btn d-flex flex-row-reverse">
+                <button class="btn col-md-3 py-2" (click)="onSaveBtnClick()">Save</button>
+            </div>
+        </div>
+
+
+    </div>
+
+    <div class="row topbar px-2">
+        <div class="col-md-3 search-div">
+            <img (click)="onSerachBtnClick()" src="../../../../../assets/icons/search.svg" class="px-3 py-2" alt="">
+            <input type="text" class="form-control px-3 py-2" placeholder="Search..." [(ngModel)]="filterTxt">
+        </div>
+        <div class="col-md-9 d-flex flex-row-reverse">
+            <button class="btn add-btn d-flex align-items-center" routerLink="/admin/home/driver-registration">
+                <!-- <img src="../../../../../assets/icons/add-driver.svg" class="px-2" alt="" height="20px"> -->
+                <span class="material-symbols-rounded px-1">
+                    add
+                </span>
+                <p>New Driver</p>
+            </button>
+        </div>
+    </div>
+
+    <div class="row tablebody mt-4 p-3">
+        <div class="col-md-12">
+            <table class="table">
+                <thead>
+                    <th>
+                        <div class="t-head">
+                            <p>ID</p>
+                            <div class="filter-btn">
+                                <span (click)="onSortBtnClick('asc','driverId')"
+                                    class="material-symbols-rounded">arrow_drop_up</span>
+                                <span (click)="onSortBtnClick('desc','driverId')"
+                                    class="material-symbols-rounded">arrow_drop_down</span>
+                            </div>
+                        </div>
+                    </th>
+                    <th>
+                        <div class="t-head">
+                            <p>Name</p>
+                            <div class="filter-btn">
+                                <span (click)="onSortBtnClick('asc','driverName')"
+                                    class="material-symbols-rounded">arrow_drop_up</span>
+                                <span (click)="onSortBtnClick('desc','driverName')"
+                                    class="material-symbols-rounded">arrow_drop_down</span>
+                            </div>
+                        </div>
+                    </th>
+                    <th>
+                        <div class="t-head">
+                            <p>Email</p>
+                            <div class="filter-btn">
+                                <span (click)="onSortBtnClick('asc','email')"
+                                    class="material-symbols-rounded">arrow_drop_up</span>
+                                <span (click)="onSortBtnClick('desc','email')"
+                                    class="material-symbols-rounded">arrow_drop_down</span>
+                            </div>
+                        </div>
+                    </th>
+                    <th>
+                        <div class="t-head">
+                            <p>Mobile No.</p>
+                            <div class="filter-btn">
+                                <span (click)="onSortBtnClick('asc','mobileNo')"
+                                    class="material-symbols-rounded">arrow_drop_up</span>
+                                <span (click)="onSortBtnClick('desc','mobileNo')"
+                                    class="material-symbols-rounded">arrow_drop_down</span>
+                            </div>
+                        </div>
+                    </th>
+                    <th>
+                        <div class="t-head">
+                            <p>Licence No</p>
+                            <div class="filter-btn">
+                                <span (click)="onSortBtnClick('asc','licenceNo')"
+                                    class="material-symbols-rounded">arrow_drop_up</span>
+                                <span (click)="onSortBtnClick('desc','licenceNo')"
+                                    class="material-symbols-rounded">arrow_drop_down</span>
+                            </div>
+                        </div>
+                    </th>
+                    <th colspan="2" class="">
+                        <!-- <p>Action</p> -->
+                    </th>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let driver of drivers" style="LINE-HEIGHT:50px">
+                        <td>{{driver.driverId}}</td>
+                        <td>{{driver.driverName}}</td>
+                        <td>{{driver.email}}</td>
+                        <td>{{driver.mobileNo}}</td>
+                        <td>{{driver.licenceNo}}</td>
+                        <td>
+                            <img (click)="onEditBtnClick(driver.driverId)" src="../../../../../assets/icons/content-edit.svg" alt="">
+                        </td>
+                        <td>
+                            <!-- <button class="btn-delete">Delete</button> -->
+                            <img src="../../../../../assets/icons/trash.svg" alt="">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="row pt-3 page-btns" *ngIf="totalPage>1">
+            <div class="col-md-6 d-flex">
+                <!-- <a class="pre-next">Previous</a> -->
+                <div class="d-flex" *ngFor="let number of pageNoArray">
+                    <a (click)="onPageNoClick(number-1)" [ngClass]="{ selected: currentPageNo === number }">{{number}}</a>
+                </div>
+                <!-- <a class="pre-next">Next</a> -->
+            </div>
+        </div>
+    </div>
+
+</div>
+
+

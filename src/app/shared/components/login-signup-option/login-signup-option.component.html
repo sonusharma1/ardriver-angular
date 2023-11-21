@@ -1,0 +1,30 @@
+<div class="container-fluid main">
+    <div class="logo">
+        <!-- <h2>Ardriver</h2> -->
+        <img src="../../../../assets/ardriver-logo3.svg" alt="">
+    </div>
+    <div class="login-signup">
+        <button class="login-btn" (click)="onLoginBtnClick()">Login</button>
+        <button class="signup-btn" (click)="onSignupBtnClick()">SignUp</button>
+    </div>
+</div>
+<div *ngIf="loginOption" class="login-options">
+    <div>
+        <button>
+            Login to drive <span class="material-symbols-rounded">chevron_right</span>
+        </button>
+    </div>
+    <div>
+        <button (click)="onCustomerLoginBtnClick()">
+            Login to ride<span class="material-symbols-rounded">chevron_right</span>
+        </button>
+    </div>
+</div>
+<div *ngIf="loginOption===false" class="signup-options">
+    <div>
+        <button>Sign up to drive</button>
+    </div>
+    <div>
+        <button (click)="onCustomerSignupBtnClick()">Sign up to ride</button>
+    </div>
+</div>

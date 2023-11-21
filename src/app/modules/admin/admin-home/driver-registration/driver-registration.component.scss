@@ -1,0 +1,29 @@
+*{
+    font-family: 'Poppins';
+}
+p, h6{
+    padding: 0;
+    margin: 0;
+}
+.topbar {
+    background: white;
+    padding: 12px 0px;
+    border-radius: 6px;
+
+    img{
+        background-color: #ebefff ;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+}
+
+.registration-form {
+    background: white;
+    padding: 12px 0px;
+    border-radius: 6px;
+
+    .submit-btn button {
+        background: #3559E9 !important;
+        color: #f8f9ff !important;
+    }
+}

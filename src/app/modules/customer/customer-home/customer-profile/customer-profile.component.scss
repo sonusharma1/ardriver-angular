@@ -1,0 +1,158 @@
+.profile-img img {
+    // border-radius: 35px;
+    border-radius: 100px;
+    height: 100px;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+    font-weight: 500;
+}
+
+h3 {
+    font-family: 'Poppins';
+
+    label {
+        font-weight: 400;
+        color: #bcbcbc;
+    }
+}
+
+.profile-box {
+    background-color: #ebf2fd;
+    border-radius: 20px;
+    // box-shadow: rgb(0 65 163 / 59%) 4px 7px 18px -10px;
+}
+
+.input-box {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+input {
+    border-radius: 10px;
+    // background-color: #ebf2fd;
+    font-family: 'Poppins';
+    font-weight: 400;
+    font-size: 15px;
+}
+
+.profile .update-form button {
+    background-color: #3563E9;
+    padding-top: 12px !important;
+    padding-bottom: 12px !important;
+    border-radius: 15px;
+}
+
+.profile .update-form button:hover {
+    background-color: #264BC8;
+}
+
+.error-msg label {
+    font-family: 'Poppins';
+    color: #DB2719;
+}
+
+.profile-img {
+    .upload-btn {
+        border: 1.5px solid #dbdbde;
+        background-color: #fff;
+        color: #0d0c22;
+        font-weight: 400;
+        font-size: 14px;
+        border-radius: 15px;
+        padding: 10px 12px;
+    }
+
+    .img-delete-btn {
+        border: none;
+        background-color: #fbe8e4;
+        color: #0d0c22;
+        font-weight: 400;
+        font-size: 14px;
+        border-radius: 15px;
+        padding: 10px 12px;
+    }
+}
+
+.password-btn {
+    background-color: #3563E9;
+    padding-top: 12px !important;
+    padding-bottom: 12px !important;
+    border-radius: 15px;
+}
+
+.password-btn:hover {
+    background-color: #264BC8;
+}
+
+// delete box---------------------------------------------------------------------------------------------------
+
+.delete-box {
+    // border: 1px solid grey;
+    // box-shadow: rgb(53 99 233) 0px 1px 6px 0px;
+    box-shadow: rgb(53 99 233 / 30%) 0px 1px 6px 0px;
+    border-radius: 5px;
+
+    h1 {
+        font-weight: 800;
+    }
+}
+
+.delete-box img {
+    height: 100px;
+}
+
+.delete-acc-btn button {
+    // color: #FF4423;
+    // border: 1px solid #7e7e7e;
+    border: 1.5px solid #dbdbde;
+    border-radius: 15px;
+    font-size: 14px;
+    font-weight: 600;
+}
+.cancel-btn {
+    border: none !important;
+    background-color: #3563E9 !important;
+    color: #fff;
+}
+
+// ---------------------------------------------------------------------------------------------------
+.tab {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+:host ::ng-deep .mat-mdc-tab-labels {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start;
+}
+
+:host ::ng-deep .mat-mdc-tab-body-wrapper {
+    // width: 500px;
+    width: 200%;
+}
+
+:host ::ng-deep .mat-mdc-tab .mdc-tab-indicator__content--underline {
+    border: none !important;
+}
+
+:host ::ng-deep .mat-mdc-tab .mdc-tab__text-label {
+    font-family: 'Poppins';
+    font-weight: 400;
+    color: #6e6d7a;
+}
+
+:host ::ng-deep .mat-mdc-tab.mdc-tab--active .mdc-tab__text-label {
+    color: #264BC8;
+    // color: #0b1122;
+    font-weight: 500;
+}
+
+.tab-body {
+    // border-left: 2px solid #dedede;
+}

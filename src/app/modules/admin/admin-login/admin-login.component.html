@@ -1,0 +1,35 @@
+<div class="container main ">
+    <div class="row">
+        <div class="col-md-6 bg d-flex justify-content-center align-items-center">
+            <img src="../../../../assets/admin-login-bg.svg" alt="">
+        </div>
+        <div class="col-md-6 d-flex justify-content-center align-items-center pt-5 mt-5">
+
+            <form class="col-md-8">
+                <h3 class="mb-5">Admin Login</h3>
+                <div class="mb-4">
+                    <label for="exampleFormControlInput1" class="form-label pb-2">
+                        <p>Username</p>
+                    </label>
+                    <input type="email" class="form-control py-3 ps-4" id="exampleFormControlInput1" name="username"
+                        [(ngModel)]="username" placeholder="username">
+                </div>
+                <div class="mb-4">
+                    <label for="exampleFormControlInput1" class="form-label pb-2">
+                        <p>Password</p>
+                    </label>
+                    <input type="password" class="form-control py-3 ps-4" id="exampleFormControlInput1" name="password"
+                        [(ngModel)]="password" placeholder="password">
+                </div>
+                <div class="mb-4">
+                    <div *ngIf="errorMsg" class="error-msg">
+                        <p>Invalid username or password</p>
+                    </div>
+                </div>
+                <div class="mb-4 mt-3 d-flex justify-content-end">
+                    <button type="submit" (click)="onLoginBtnClick()" class="btn btn-primary py-2 col-md-12">Login</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

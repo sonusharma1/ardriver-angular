@@ -1,0 +1,155 @@
+<div class="container pt-4 ">
+    <div class="row welcome-div">
+        <div class="col-md-6">
+            <h6>Welcome Back Admin <span> 😊 </span> </h6>
+        </div>
+    </div>
+
+    <div class="row top-bar pt-3">
+        <div class="col-md-3">
+            <div class="report-card px-3 py-3">
+                <div class="mb-2">
+                    <p>Total Trips</p>
+                </div>
+                <div class="mb-3">
+                    <h6>{{totalTrips}}</h6>
+                </div>
+                <div class="mb-2">
+                    <label class="me-2 p-1 px-2" [ngClass]="{
+                        'positive-percent': tripsPercentage>0,
+                        'negative-percent': tripsPercentage<0,
+                    }">
+                        {{tripsPercentage.toFixed(2)}}%
+                        <span class="material-symbols-rounded" *ngIf="tripsPercentage>0">
+                            arrow_upward
+                        </span>
+                        <span class="material-symbols-rounded" *ngIf="tripsPercentage<0">
+                            arrow_downward
+                        </span>
+                    </label>
+                    <label>than previous month</label>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="report-card px-3 py-3">
+                <div class="mb-2">
+                    <p>Total Revenue</p>
+                </div>
+                <div class="mb-3">
+                    <h6>
+                        <span class="material-symbols-rounded" style="font-size: 25px;">
+                            currency_rupee
+                        </span>
+                        {{totalCurrentYearRevenue}}
+                    </h6>
+                </div>
+                <div class="mb-2">
+                    <label class="me-2 p-1 px-2" [ngClass]="{
+                        'positive-percent': revenuePercentage>0,
+                        'negative-percent': revenuePercentage<0,
+                    }">
+                        {{revenuePercentage.toFixed(2)}}%
+                        <span class="material-symbols-rounded" *ngIf="revenuePercentage>0">
+                            arrow_upward
+                        </span>
+                        <span class="material-symbols-rounded" *ngIf="revenuePercentage<0">
+                            arrow_downward
+                        </span>
+                    </label>
+                    <label>than previous month</label>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="report-card px-3 py-3">
+                <div class="mb-2">
+                    <p>Total Drivers</p>
+                </div>
+                <div class="mb-3">
+                    <h6>{{totalDrivers}}</h6>
+                </div>
+                <div class="mb-2">
+                    <label class="me-2 p-1 px-2" [ngClass]="{
+                        'positive-percent': driverPercentage>0,
+                        'negative-percent': driverPercentage<0,
+                    }">
+                        {{driverPercentage}}%
+                        <span class="material-symbols-rounded" *ngIf="driverPercentage>0">
+                            arrow_upward
+                        </span>
+                        <span class="material-symbols-rounded" *ngIf="driverPercentage<0">
+                            arrow_downward
+                        </span>
+                    </label>
+                    <label>than previous month</label>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="report-card px-3 py-3">
+                <div class="mb-2">
+                    <p>Total Riders</p>
+                </div>
+                <div class="mb-3">
+                    <h6>{{totalCustomer}}</h6>
+                </div>
+                <div class="mb-2">
+                    <label class="me-2 p-1 px-2" [ngClass]="{
+                        'positive-percent': customerPercentage>0,
+                        'negative-percent': customerPercentage<0,
+                    }">
+                        {{customerPercentage}}%
+                        <span class="material-symbols-rounded" *ngIf="customerPercentage>0">
+                            arrow_upward
+                        </span>
+                        <span class="material-symbols-rounded" *ngIf="customerPercentage<0">
+                            arrow_downward
+                        </span>
+                    </label>
+                    <label>than previous month</label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="statistic mt-4 px-3 pb-4 py-3">
+        <div class="row d-flex justify-content-between gx-5">
+
+            <!-- Sales Report -->
+            <div class="col-md-7 sales-report py-4">
+                <!-- <img src="../../../../../assets/sales-report2.svg" alt=""> -->
+                <app-revenue-graph></app-revenue-graph>
+            </div>
+
+
+            <!-- Top Drivers -->
+            <div class="col-md-4 top-drivers py-4">
+                <div class="col-md-12 pt-3 pb-2">
+                    <h6>Top drivers</h6>
+                </div>
+
+                <div class="row pt-4 d-flex" *ngFor="let topDriver of topDrivers; let indexOfelement=index;">
+                    <div class="col-md-2">
+                        <!-- <img src="../../../../../assets/male-avatar.svg" alt=""> -->
+                        <img src="../../../../../assets/avatars/avatar{{indexOfelement}}.svg" alt="">
+                        <!-- {{indexOfelement}} -->
+                    </div>
+                    <div class="col-md-6">
+                        <p class="driver-name">{{topDriver[0].driver.driverName}}</p>
+                        <p class="driver-email">{{topDriver[0].driver.email}}</p>
+                    </div>
+                    <div class="col-md-4 d-flex align-items-center justify-content-end">
+                        <span class="material-symbols-rounded" style="font-size: 21px;">
+                            currency_rupee
+                        </span>
+                        <p class="currency">
+                            {{topDriver[1].toFixed(2)}}
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
